@@ -1,5 +1,5 @@
 import {PersonalDataForm} from './PersonalDataForm'
-import {NotificationAdressForm} from './NotificationAdressForm'
+import {NotificationAddressForm} from './NotificationAddressForm'
 import {ClaimBasicDataForm} from './ClaimBasicDataForm'
 
 export function ClaimForm() {
@@ -15,26 +15,28 @@ export function ClaimForm() {
 				Rellena el siguiente formulario para presentar una queja o realizar una sugerencia. Para una gestión ágil, aporta los detalles de los hechos referidos y adjunta la documentación que creas necesaria.
 			</p>
 
-			<PersonalDataForm/>
+			<form action="">
+				<PersonalDataForm/>
 
-			<NotificationAdressForm/>
+				<NotificationAddressForm/>
 
-			<ClaimBasicDataForm/>
+				<ClaimBasicDataForm/>
 
-			<div>
-				<p><strong>Corresponsables del tratamiento:</strong>CONSORCI DE TRANSPORTS DE MALLORCA (CTM).</p>
-				<p><strong>Finalidad: </strong>La finalidad del tratamiento es la gestión de sus reclamaciones o sugerencias y la mejora de la calidad de nuestros servicios.</p>
-				<p><strong>Legitimación: </strong>La base jurídica del tratamiento es la relación jurídica con nuestros usuarios y nuestro interés legítimo en evaluar y mejorar nuestros servicios</p>
-				<p><strong>Derechos: </strong>Tiene derecho a acceder, rectificar y suprimir los datos, a limitar su tratamiento, a la portabilidad de sus datos, a oponerse al tratamiento, a presentar una reclamación ante la autoridad de control competente.</p>
-				<p><strong>Información adicional</strong>Puede consultar información adicional y detallada sobre Protección de Datos en la política de privacidad de RECLAMACIONES disponible aquí. Puede contactar con el Delegado de Protección de Datos del CTM en: protecciodedades@consorcidetransports.com.</p>
-			</div>
+				<div>
+					<p><strong>Corresponsables del tratamiento:</strong>CONSORCI DE TRANSPORTS DE MALLORCA (CTM).</p>
+					<p><strong>Finalidad: </strong>La finalidad del tratamiento es la gestión de sus reclamaciones o sugerencias y la mejora de la calidad de nuestros servicios.</p>
+					<p><strong>Legitimación: </strong>La base jurídica del tratamiento es la relación jurídica con nuestros usuarios y nuestro interés legítimo en evaluar y mejorar nuestros servicios</p>
+					<p><strong>Derechos: </strong>Tiene derecho a acceder, rectificar y suprimir los datos, a limitar su tratamiento, a la portabilidad de sus datos, a oponerse al tratamiento, a presentar una reclamación ante la autoridad de control competente.</p>
+					<p><strong>Información adicional</strong>Puede consultar información adicional y detallada sobre Protección de Datos en la política de privacidad de RECLAMACIONES disponible aquí. Puede contactar con el Delegado de Protección de Datos del CTM en: protecciodedades@consorcidetransports.com.</p>
+				</div>
 
-			{//Insertar aqui lo des captcha
-			}
+				{//Insertar aqui lo des captcha
+				}
 
-			<button>
-				Enviar
-			</button>
+				<button>
+					Enviar
+				</button>
+			</form>
 		</>
 	);
 }

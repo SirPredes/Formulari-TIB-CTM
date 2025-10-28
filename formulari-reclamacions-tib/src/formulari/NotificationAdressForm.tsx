@@ -1,7 +1,0 @@
-export function NotificationAdressForm(){
-    return (
-        <>
-        
-        </>
-    );
-}
