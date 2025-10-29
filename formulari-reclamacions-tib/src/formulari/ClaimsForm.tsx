@@ -2,7 +2,7 @@ import {PersonalDataForm} from './PersonalDataForm'
 import {NotificationAddressForm} from './NotificationAddressForm'
 import {ClaimBasicDataForm} from './ClaimBasicDataForm'
 
-export function ClaimForm() {
+export function ClaimsForm() {
     return (
 		<>
 			<div>

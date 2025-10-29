@@ -22,7 +22,7 @@ class WebComponent extends HTMLElement {
   }
 }
 
-const ELEMENT_NAME = 'my-react-custom-element';
+const ELEMENT_NAME = 'formulari-reclamacions-tib';
 
 if (customElements.get(ELEMENT_NAME)) {
   console.log(`Skipping registration for <${ELEMENT_NAME}> (already registered)`);

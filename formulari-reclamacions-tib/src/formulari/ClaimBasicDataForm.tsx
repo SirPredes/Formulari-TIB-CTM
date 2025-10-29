@@ -11,9 +11,9 @@ export function ClaimBasicDataForm(){
                     //Aqui es de sa data i pegues
                 }
             </div>
-            {
-                //Aqui es form intermig
-            }
+                {
+                    //Aqui es form intermig
+                }
             <div>
                 {
                     //Aqui ses textarea
