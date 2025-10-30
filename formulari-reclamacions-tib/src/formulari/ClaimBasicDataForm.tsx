@@ -4,7 +4,7 @@ export function ClaimBasicDataForm(){
             <div className="parent-basic-data-form">
                 <h4>Datos Básicos para tu reclamación</h4>
                 <div className="input-basic-data-form">
-                    <div className="input-tipo radio-input">
+                    <fieldset className="input-tipo radio-input">
 
                         <p className="input-text">Tipo de consulta *</p>
 
@@ -12,6 +12,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="reclamacion" 
                                 name="tipo-consulta"
+                                required
                             />
                             <label htmlFor="reclamacion">Reclamación</label>
                         </div>
@@ -22,8 +23,8 @@ export function ClaimBasicDataForm(){
                             />
                             <label htmlFor="sugerencia">Sugerencia</label>
                         </div>
-                    </div>
-                    <div className="input-ambito  radio-input">
+                    </fieldset>
+                    <fieldset className="input-ambito  radio-input">
 
                         <p className="input-text">Ámbito de reclamación *</p>
                         
@@ -31,6 +32,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="Bus" 
                                 name="ambito-reclamacion"
+                                required
                             />
                             <label htmlFor="Bus">Bus</label>
                         </div>
@@ -55,7 +57,7 @@ export function ClaimBasicDataForm(){
                             />
                             <label htmlFor="otros">Otros</label>
                         </div>
-                    </div>
+                    </fieldset>
                 </div>
                 <div className="input-fecha-linea-billete-lugar">
                     <div className="input-fecha-detalle">
@@ -88,7 +90,7 @@ export function ClaimBasicDataForm(){
                     </div>
                 </div>
                 <div className="parent-requerida-idioma">
-                    <div className="input-respuesta-requerida radio-input">
+                    <fieldset className="input-respuesta-requerida radio-input">
 
                         <p className="input-text">¿Tu reclamación requiere respuesta? *</p>
 
@@ -96,6 +98,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="respuesta-no" 
                                 name="respuesta-reclamacion-requerida"
+                                required
                             />
                             <label htmlFor="respuesta-no">No</label>
                         </div>
@@ -106,15 +109,16 @@ export function ClaimBasicDataForm(){
                             />
                             <label htmlFor="respuesta-si">Si</label>
                         </div>
-                    </div>
-                    <div className="input-idioma-respuesta  radio-input">
+                    </fieldset>
+                    <fieldset className="input-idioma-respuesta  radio-input">
 
-                        <p className="input-text">Tipo de consulta *</p>
+                        <p className="input-text">Idioma de la consulta *</p>
 
                         <div className="radio-option">
                             <input type="radio" 
                                 id="idiomaCatala" 
                                 name="idioma-respuesta"
+                                required
                             />
                             <label htmlFor="idiomaCatala">Català</label>
                         </div>
@@ -125,7 +129,7 @@ export function ClaimBasicDataForm(){
                             />
                             <label htmlFor="idiomaCastellano">Castellano</label>
                         </div>
-                    </div>
+                    </fieldset>
                 </div>
                 <div className="parent-archivo">
                     <div className="input-archivo">
@@ -146,6 +150,7 @@ export function ClaimBasicDataForm(){
                                 rows={4}
                                 cols={80}
                                 placeholder="Expongo *"
+                                required
                         />
                     </div>
                     <p className="input-text">Máximo 4000 caracteres</p>
@@ -156,6 +161,7 @@ export function ClaimBasicDataForm(){
                                 rows={4}
                                 cols={80}
                                 placeholder="Solicito *"
+                                required
                         />
                     </div>
                 </div>
