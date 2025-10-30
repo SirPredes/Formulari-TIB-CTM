@@ -1,6 +1,7 @@
 import {PersonalDataForm} from './PersonalDataForm'
 import {NotificationAddressForm} from './NotificationAddressForm'
 import {ClaimBasicDataForm} from './ClaimBasicDataForm'
+import '../index.css'
 
 export function ClaimsForm() {
     return (
@@ -11,7 +12,7 @@ export function ClaimsForm() {
 					Formulario
 				</h4>
 			</div>
-			<p>
+			<p className='explicacion-formulario'>
 				Rellena el siguiente formulario para presentar una queja o realizar una sugerencia. Para una gestión ágil, aporta los detalles de los hechos referidos y adjunta la documentación que creas necesaria.
 			</p>
 
@@ -23,7 +24,7 @@ export function ClaimsForm() {
 				<ClaimBasicDataForm/>
 
 				<div className='aviso-legal-formulario'>
-					<p><strong>Corresponsables del tratamiento:</strong>CONSORCI DE TRANSPORTS DE MALLORCA (CTM).</p>
+					<p><strong>Corresponsables del tratamiento: </strong>CONSORCI DE TRANSPORTS DE MALLORCA (CTM).</p>
 					<p><strong>Finalidad: </strong>La finalidad del tratamiento es la gestión de sus reclamaciones o sugerencias y la mejora de la calidad de nuestros servicios.</p>
 					<p><strong>Legitimación: </strong>La base jurídica del tratamiento es la relación jurídica con nuestros usuarios y nuestro interés legítimo en evaluar y mejorar nuestros servicios</p>
 					<p><strong>Derechos: </strong>Tiene derecho a acceder, rectificar y suprimir los datos, a limitar su tratamiento, a la portabilidad de sus datos, a oponerse al tratamiento, a presentar una reclamación ante la autoridad de control competente.</p>
