@@ -12,6 +12,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="reclamacion" 
                                 name="tipo-consulta"
+                                value={"1"}
                                 required
                             />
                             <label htmlFor="reclamacion">Reclamación</label>
@@ -20,6 +21,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                     id="sugerencia" 
                                     name="tipo-consulta"
+                                    value={"2"}
                             />
                             <label htmlFor="sugerencia">Sugerencia</label>
                         </div>
@@ -32,6 +34,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="Bus" 
                                 name="ambito-reclamacion"
+                                value={"1"}
                                 required
                             />
                             <label htmlFor="Bus">Bus</label>
@@ -40,6 +43,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="tren-metro" 
                                 name="ambito-reclamacion"
+                                value={"2"}
                             />
                             <label htmlFor="tren-metro">Tren/Metro</label>
                         </div>
@@ -47,6 +51,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="sistema-tarifario" 
                                 name="ambito-reclamacion"
+                                value={"3"}
                             />
                             <label htmlFor="sistema-tarifario">Sistema tarifario</label>
                         </div>
@@ -54,6 +59,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="otros" 
                                 name="ambito-reclamacion"
+                                value={"4"}
                             />
                             <label htmlFor="otros">Otros</label>
                         </div>
@@ -98,6 +104,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="respuesta-no" 
                                 name="respuesta-reclamacion-requerida"
+                                value={"N"}
                                 required
                             />
                             <label htmlFor="respuesta-no">No</label>
@@ -106,6 +113,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="respuesta-si" 
                                 name="respuesta-reclamacion-requerida"
+                                value={"S"}
                             />
                             <label htmlFor="respuesta-si">Si</label>
                         </div>
@@ -118,6 +126,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="idiomaCatala" 
                                 name="idioma-respuesta"
+                                value={"CA"}
                                 required
                             />
                             <label htmlFor="idiomaCatala">Català</label>
@@ -126,6 +135,7 @@ export function ClaimBasicDataForm(){
                             <input type="radio" 
                                 id="idiomaCastellano" 
                                 name="idioma-respuesta"
+                                value={"ES"}
                             />
                             <label htmlFor="idiomaCastellano">Castellano</label>
                         </div>
