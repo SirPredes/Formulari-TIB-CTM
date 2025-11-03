@@ -22,7 +22,8 @@ a:hover{
   text-decoration: underline;
 }
 .input-text{
-  color: #002E6D;
+  color: #454749;
+  font-weight: 500;
 }
 .aviso-legal-formulario p strong{
   font-weight: 800;
@@ -53,7 +54,7 @@ img{
   margin-right: 10px;
 }
 input{
-  width: 97%;
+  width: 97.5%;
   padding: 5px 10px;
   background: white;
   color: #002E6D;
@@ -122,6 +123,7 @@ input[type=radio]:focus{
 }
 .radio-option{
   display: flex;
+  margin: 0 10px;
 }
 label{
   text-align: center;
@@ -130,7 +132,7 @@ label{
   margin-left: 5px;
 
   font-family: TIB,Roboto,sans-serif;
-  color: #002E6D;
+  color: #454749;
 }
 .input-fecha-detalle{
   display: flex;
@@ -139,6 +141,9 @@ label{
 }
 .radio-input{
   padding: 0 15px;
+
+  display: flex;
+  align-items: center;
 }
 button{
   width: 50%;
@@ -158,5 +163,16 @@ button:hover{
   background: white;
   border: 1px solid #dc042b;
   color: #dc042b;
+}
+
+.input-error{
+  color: #dc042b;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.input-no-error{
+  display: none;
 }
 

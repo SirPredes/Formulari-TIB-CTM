@@ -20,4 +20,5 @@ export interface ClaimFormData {
   ambito: string;
   claimType: string;
   archivo: File | null;
+  recaptchaToken: string;
 }

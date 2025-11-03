@@ -5,6 +5,7 @@ import type { ClaimPayload } from './ClaimPayload'
 import type { ClaimFormData } from './ClaimFormData'
 import '../index.css'
 import { useState} from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 export function ClaimsForm() {
 
@@ -13,7 +14,7 @@ export function ClaimsForm() {
   	const [success, setSuccess] = useState(false);
 	
 	const [formData, setFormData] = useState<ClaimFormData>({
-		claimDate: "",
+		claimDate: new Date().toISOString().slice(0, 16),
 		linea: "",
 		ticket: "",
 		lugar: "",
@@ -34,6 +35,7 @@ export function ClaimsForm() {
 		ambito: "",
 		claimType: "",
 		archivo: null,
+		recaptchaToken: "",
 	});
 
 	
@@ -52,7 +54,6 @@ export function ClaimsForm() {
 
 		// Lista de campos obligatorios
 		const requiredFields = [
-			"claimDate",
 			"linea",
 			"ticket",
 			"lugar",
@@ -105,7 +106,7 @@ export function ClaimsForm() {
 			demand: formData.solicito,
 			desiredResponse: formData.respuesta,
 			documentNumber: formData.documentNumber,
-			"g-recaptcha-response": "TOKEN_RECAPTCHA", // Integrar es captcha aqui
+			"g-recaptcha-response": formData.recaptchaToken,
 			incidenceLocation: formData.lugar,
 			meansOfTransport: formData.ambito,
 			meansOfTransportNumber: formData.linea,
@@ -127,19 +128,22 @@ export function ClaimsForm() {
 
 
 	const handleSubmit = async (e: React.FormEvent) => {
+		console.log("S'ha cridat handleSubmit")
 		
 		e.preventDefault();
-		if (!validateForm()) return; //Aqui he de fer que aparesquin els errors a nes camp que ho necessiti
+		if (!validateForm()) return;
 
 		setLoading(true);
 		const payload = await buildPayload();
 
 		try {
-			const response = await fetch("https://api.tib.org/sgiws", {
+			const response = await fetch("", { //"https://api.tib.org/sgiws"
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(payload)
 		});
+
+		console.log(payload) //Per debugging
 
 		if (response.ok) {
 			setSuccess(true);
@@ -167,9 +171,9 @@ export function ClaimsForm() {
 			<form onSubmit={handleSubmit}>
 				<PersonalDataForm formData={formData} setFormData={setFormData} errors={errors}/>
 
-				<NotificationAddressForm/>
+				<NotificationAddressForm formData={formData} setFormData={setFormData} errors={errors}/>
 
-				<ClaimBasicDataForm/>
+				<ClaimBasicDataForm formData={formData} setFormData={setFormData} errors={errors}/>
 
 				<div className='aviso-legal-formulario'>
 					<p><strong>Corresponsables del tratamiento: </strong>CONSORCI DE TRANSPORTS DE MALLORCA (CTM).</p>
@@ -179,11 +183,12 @@ export function ClaimsForm() {
 					<p><strong>Información adicional</strong>Puede consultar información adicional y detallada sobre Protección de Datos en la política de privacidad de RECLAMACIONES disponible <a href='placeholder.com'>aquí</a>. Puede contactar con el Delegado de Protección de Datos del CTM en: protecciodedades@consorcidetransports.com.</p>
 				</div>
 
-				{//Insertar aqui lo des captcha
-				}
+				<ReCAPTCHA
+					sitekey='03AFcWeA6tlOf9EDt9uC5mM4jJXRzhNXej1x2cJ4C7TWyJ1txbmOG6tmoOIcPkT-EpT8pJsx7pnFRCgz_8mz88LAbaX61fe1HXUrgbfSqf3NI2sbQhuqd2pb4qZc-FvFGuu96Y6aILh9PlPRJehYA6YQH-Y8CT6R2_FfLzv6p-r7eIuMu8Uj7MMhzU8jqgcl6UctqO6-a4YqcdNj5P5W34kKKx-mAmrgXbTBGIB_ICIUj6WzsOgxLTiN-9FGIRLvL3zQKucBOKdRSrYzjwTT_rGXGsMs1xOsxlSYOKwulGHZvg6J0PRx7YC3qixf6cWjZPIIGBVNSLA5gzjY-mminElxfC7-RaLB1qwLbpge8kX9Y49VK7hCxDAnpIxwJfnX8ndgaM5EjdPlv8JsO-m6GrhLCKLudnxnFcUfuPG9yQZ_OqyMFp8Ro2TkWS7SDTGY3waKGavLh1CYBmy8Ely4ZENRN3DpxEVmTese8qrpZxKF6Oyq1bz0XXN5FF1dcX-xshtdKBmcyINJEHFTrdbOevbn_HYNcY4aXxLOtA9OuhobmMNzdZJY0P9ntBEhThFOnRFct4sqnhG0HGSw1ejr6hlwcS89kqSJQwayHkoeGbCZy4837oTYp4Y3okfrJgzRnZSZ8Gr0VtnTWcviRrzHoo9igRFB7C4uDqHSxzLwF8yL14qw91OFxobQCSQJLyAqYDrngl6SMwXegwzJRsoZ_njeZz7ntjSUvThm0VT87a-u07vU_PH0T6eYFysnkUhZ3TuLSEj4WMJj7EziNV1nn7E7eBGNn1azKdlIuZjYG4L5_F_zqXbkQH3SqjvoLwQHT5jxKnYKkqhorE8srUld4nZZLMJ4mp13brnzXSplQv8BHvOaf9WtIRPVdbfOXwABssZ58D1tHh4ay1e6t5iLUf8C8wxWxmCgLKs_94a1A2wh8AabO3Vsbhl6SSdxTbf-4b6anKq2lNVDNMf48p0vY5xnhITozhX_y-FjlwzpN6H_vn1SnoPPgtlLwboXbPbhf0fwv779BMMfs1QwFnWOdF0O_i1neRoFjxHYmu0h2XP37KqBaxtbWO8wWD-6LGDX3fmpchgY6rLBJ1xSG3WFc9ioDWffbljzJyErgOFuZr4MS5ldZRJJbQNeJaLjWraBm3SSbtJcHenyoJngVKI56F8lhP3FStSQo4B7erBLSPyarOHATXKuVePH7_9prWhxmEw5-jrN1Bj7bLS_iPIyjB9V6Gmu16qEArou6YkDPX4j2-VmVY3Su63ZdcHVUo2JrsSnakh5bFMkFDHVrcv-7Bqpc2cTI2Yjl0uyMjPqCZNDJu9zQYKw8y65qloNcAP3xav2-YhK_hF7hOMKGYot_QauxAlXS5ZPi2yhD6emfvnd2uktAhIY4j_aq5f-dKb7VXdLMGdDqw_XdP4uDLGZTAmux8aFDoxzGtVA'
+					onChange={(token) => setFormData(prev => ({...prev, recaptchaToken: token || ""}))}
+				/>
 
-				<button type='submit' 
-						form='claimsForm'
+				<button type='submit'
 						disabled={loading}
 				>
 
