@@ -1,9 +1,9 @@
 assemble:
-    -   from: build/vite
+    -   from: vite-build
         into: static
 formulari-reclamacions-tib:
     cssURLs:
-        -   "*/src/index.css"
+        -   "assets/*.css"
     friendlyURLMapping: formulari-reclamacions-tib
     htmlElementName: formulari-reclamacions-tib
     instanceable: false
@@ -13,5 +13,5 @@ formulari-reclamacions-tib:
         foo: bar
     type: customElement
     urls:
-        -   "main.tsx"
+        -   "assets/*.js"
     useESM: true

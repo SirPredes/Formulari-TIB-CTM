@@ -1,11 +1,11 @@
-:root {
+.formulario-tib {
   display: flex;
   flex-direction: column;
   max-width: 800px;
   padding: 0 15px;
   background-color: rgb(240, 238, 238);
 }
-p{
+.formulario-tib p{
   font-family: Roboto,sans-serif;
   color: #666;
   font-size: 16px;
@@ -13,32 +13,32 @@ p{
   margin: 0px;
   font-weight: 400;
 }
-a{
+.formulario-tib a{
   color: #dd052b;
   font-family: TIB,Roboto,sans-serif;
   text-decoration: none;
 }
-a:hover{
+.formulario-tib a:hover{
   text-decoration: underline;
 }
-.input-text{
+.formulario-tib .input-text{
   color: #454749;
   font-weight: 500;
 }
-.aviso-legal-formulario p strong{
+.formulario-tib .aviso-legal-formulario p strong{
   font-weight: 800;
 }
-.titulo-formulario{
+.formulario-tib .titulo-formulario{
   display: flex;
   align-items: center;
   border-bottom: 1px solid #002E6D;
   padding-bottom: 8px;
   margin-bottom: 15px;
 }
-.titulo-formulario h4{
+.formulario-tib .titulo-formulario h4{
   margin: 0;
 }
-h4{
+.formulario-tib h4{
   font-size: 18px;
   color: #002e6d;
 
@@ -46,14 +46,14 @@ h4{
   
   margin: 2rem 0;
 }
-.explicacion-formulario{
+.formulario-tib .explicacion-formulario{
   margin: 1rem 0;
 }
-img{
+.formulario-tib img{
   width: 20px;
   margin-right: 10px;
 }
-input{
+.formulario-tib input{
   width: 97.5%;
   padding: 5px 10px;
   background: white;
@@ -67,12 +67,12 @@ input{
 
   font-weight: 600;
 }
-input[type=radio]{
+.formulario-tib input[type=radio]{
   cursor: pointer;
   height: 15px;
   width: 14px;
 }
-input[type=datetime-local]{
+.formulario-tib input[type=datetime-local]{
   max-width: 50%;
 
   display: flex;
@@ -81,7 +81,7 @@ input[type=datetime-local]{
   margin: 0;
   padding: 0;
 }
-textarea{
+.formulario-tib textarea{
   width: 97%;
   padding: 5px 10px;
   background: white;
@@ -96,21 +96,21 @@ textarea{
   color: #666;
   font-size: 16px;
 }
-input:focus,
-textarea:focus{
+.formulario-tib input:focus,
+.formulario-tib textarea:focus{
   outline: 3px solid #002E6D;
 }
-input[type=radio]:focus{
+.formulario-tib input[type=radio]:focus{
   outline: none;
 }
-.input-tipo,
-.input-ambito,
-.input-fecha-detalle,
-.input-tarjeta-billete-lugar,
-.input-respuesta-requerida,
-.input-idioma-respuesta,
-.input-archivo,
-.input-textarea{
+.formulario-tib .input-tipo,
+.formulario-tib .input-ambito,
+.formulario-tib .input-fecha-detalle,
+.formulario-tib .input-tarjeta-billete-lugar,
+.formulario-tib .input-respuesta-requerida,
+.formulario-tib .input-idioma-respuesta,
+.formulario-tib .input-archivo,
+.formulario-tib .input-textarea{
   background: white;
   border: none;
   border-radius: 3px;
@@ -118,14 +118,14 @@ input[type=radio]:focus{
   margin: 10px 0;
   padding: 5px 10px;
 }
-.input-textarea{
+.formulario-tib .input-textarea{
   padding: 10px;
 }
-.radio-option{
+.formulario-tib .radio-option{
   display: flex;
   margin: 0 10px;
 }
-label{
+.formulario-tib label{
   text-align: center;
   align-self: center;
 
@@ -134,18 +134,18 @@ label{
   font-family: TIB,Roboto,sans-serif;
   color: #454749;
 }
-.input-fecha-detalle{
+.formulario-tib .input-fecha-detalle{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.radio-input{
+.formulario-tib .radio-input{
   padding: 0 15px;
 
   display: flex;
   align-items: center;
 }
-button{
+.formulario-tib button{
   width: 50%;
   background-color: #dc042b;
   padding: 10px;
@@ -159,20 +159,20 @@ button{
   font-family: Roboto,sans-serif;
   font-size: 16px;
 }
-button:hover{
+.formulario-tib button:hover{
   background: white;
   border: 1px solid #dc042b;
   color: #dc042b;
 }
 
-.input-error{
+.formulario-tib .input-error{
   color: #dc042b;
   font-size: 0.7rem;
   font-weight: 600;
   margin-left: 10px;
 }
 
-.input-no-error{
+.formulario-tib .input-no-error{
   display: none;
 }
 

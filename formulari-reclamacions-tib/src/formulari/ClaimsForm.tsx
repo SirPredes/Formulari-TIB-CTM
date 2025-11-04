@@ -154,13 +154,15 @@ export function ClaimsForm() {
 			alert("Error de conexión"); //Canviar per element de html
 		} finally {
 			setLoading(false);
+			console.log(success);
 		}
 	}
     return (
 		<>{
 			//FICAR AQUI UN ELEMENT PER MOSTRAR QUAN S'ENVII DE MANERA CORRECTA
 		}
-			<div className='titulo-formulario'>
+			<div className='formulario-tib'>
+				<div className='titulo-formulario'>
 				<img src="https://www.tib.org/o/ctm-base-theme/images/Doc.svg"/>
 				<h4>
 					Formulario
@@ -190,7 +192,8 @@ export function ClaimsForm() {
 					onChange={(token) => setFormData(prev => ({...prev, recaptchaToken: token || ""}))}
 				/>
 
-				<button type='submit'
+				<button className=''
+						type='submit'
 						disabled={loading}
 				>
 
@@ -198,6 +201,7 @@ export function ClaimsForm() {
 
 				</button>
 			</form>
+			</div>
 		</>
 	);
 }
