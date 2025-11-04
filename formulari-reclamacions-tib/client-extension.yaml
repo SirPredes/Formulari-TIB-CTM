@@ -1,15 +1,17 @@
 assemble:
-    - from: vite-build
-      into: static
+    -   from: build/vite
+        into: static
 formulari-reclamacions-tib:
     cssURLs:
-        - style.css
+        -   "*/src/index.css"
     friendlyURLMapping: formulari-reclamacions-tib
     htmlElementName: formulari-reclamacions-tib
     instanceable: false
     name: Formulari Reclamacions TIB
     portletCategoryName: category.client-extensions
+    properties:
+        foo: bar
     type: customElement
     urls:
-        - assets/*.js
+        -   "main.tsx"
     useESM: true

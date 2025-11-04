@@ -11,7 +11,7 @@ export function ClaimsForm() {
 
 	const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
 	const [loading, setLoading] = useState(false);
-  	const [success, setSuccess] = useState(false);
+  	const [success, setSuccess] = useState(false); // Per mostrar missatges de validacio a s'usuari
 	
 	const [formData, setFormData] = useState<ClaimFormData>({
 		claimDate: new Date().toISOString().slice(0, 16),
@@ -157,7 +157,9 @@ export function ClaimsForm() {
 		}
 	}
     return (
-		<>
+		<>{
+			//FICAR AQUI UN ELEMENT PER MOSTRAR QUAN S'ENVII DE MANERA CORRECTA
+		}
 			<div className='titulo-formulario'>
 				<img src="https://www.tib.org/o/ctm-base-theme/images/Doc.svg"/>
 				<h4>
