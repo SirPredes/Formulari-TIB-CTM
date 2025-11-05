@@ -4,11 +4,11 @@
   max-width: 800px;
   padding: 15px;
   background-color: rgb(240, 238, 238);
+  font-size: 16px;
 }
 .formulario-tib p{
   font-family: Roboto,sans-serif;
   color: #666;
-  font-size: 16px;
   line-height: 28px;
   margin: 0px;
   font-weight: 400;
@@ -59,7 +59,7 @@
   background: white;
   color: #002E6D;
   margin: 10px 0;
-  height: 30px;
+  height: 2.75rem; /*30px en local*/
   display: flex;
   align-items: center;
   border: none;
@@ -82,7 +82,7 @@
   padding: 0;
 }
 .formulario-tib textarea{
-  width: 96%;
+  width: 97.5%;
   padding: 5px 10px;
   background: white;
   color: #002E6D;
@@ -141,6 +141,8 @@
   margin-left: 5px;
 
   font-family: TIB,Roboto,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   color: #454749;
 }
 .formulario-tib .input-fecha-detalle{
@@ -189,7 +191,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 98.5%;
+    width: 98.75%;
     padding: 0;
     margin: 0;
   }
@@ -197,12 +199,12 @@
   .formulario-tib .input-agrupa2 .input-linea-detalle,
   .formulario-tib .input-agrupa2 .input-tarjeta-billete-detalle,
   .formulario-tib .input-agrupa2 .input-lugar-detalle{
-    width: 48.5%;
+    width: 50%;/*48.5% en local*/
   }
   .formulario-tib .input-agrupa2 .input-fecha-detalle{
-    width: 48%;
+    width: 48.75%;/*48% en local*/
     margin: 0px;
-    padding: 5px;
+    padding: 0 5px;/*5px en local*/
     padding-left: 10px;
   }
   .formulario-tib .radio-input{
@@ -240,5 +242,8 @@
   }
   .formulario-tib button{
     width: 100%;
+  }
+  .formulario-tib textarea{
+    width: 94.5%;
   }
 }

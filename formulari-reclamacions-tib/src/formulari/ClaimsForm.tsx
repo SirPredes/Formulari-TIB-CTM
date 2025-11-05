@@ -137,13 +137,13 @@ export function ClaimsForm() {
 		const payload = await buildPayload();
 
 		try {
-			const response = await fetch("", { //"https://api.tib.org/sgiws"
+			const response = await fetch("https://api.tib.org/sgiws", { //"https://api.tib.org/sgiws"
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(payload)
 		});
 
-		console.log(payload) //Per debugging
+		//console.log(payload) //Per debugging
 
 		if (response.ok) {
 			setSuccess(true);
