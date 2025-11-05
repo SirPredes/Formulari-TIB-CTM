@@ -48,7 +48,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
 
                     <fieldset className="input-ambito  radio-input">
 
-                        <p className="input-text">Ámbito de reclamación *</p>
+                        <p className="input-text"><strong>Ámbito de reclamación *</strong></p>
                         
                         <div className="radio-option">
                             <input type="radio" 
@@ -95,27 +95,30 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
 
                 </div>
                 <div className="input-fecha-linea-billete-lugar">
-                    <div className="input-fecha-detalle">
-                        <p className="input-text">Fecha incidencia: *</p>
+                    <div className="input-agrupa2">
+                        <div className="input-fecha-detalle">
+                        <p className="input-text"><strong>Fecha incidencia: *</strong></p>
                         <input id="claimDate" 
                                 type="datetime-local" 
                                 name="fecha-reclamacion"
                                 value={formData.claimDate}
                                 onChange={(e) => handleChange("claimDate", e.target.value)}
                         />
+                        </div>
+                        <div className="input-linea-detalle">
+                            <input id="claimline" 
+                                className="claim-form-text-input" 
+                                type="text" 
+                                placeholder="Línea utilizada *" 
+                                name="linea-reclamacion"
+                                value={formData.linea}
+                                onChange={(e) => handleChange("linea", e.target.value)}
+                            />
+                            <p className={`${errors?.linea ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
+                        </div>
                     </div>
-                    <div className="input-linea-detalle">
-                        <input id="claimline" 
-                            className="claim-form-text-input" 
-                            type="text" 
-                            placeholder="Línea utilizada *" 
-                            name="linea-reclamacion"
-                            value={formData.linea}
-                            onChange={(e) => handleChange("linea", e.target.value)}
-                        />
-                        <p className={`${errors?.linea ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
-                    </div>
-                    <div className="input-tarjeta-billete-detalle">
+                    <div className="input-agrupa2">
+                        <div className="input-tarjeta-billete-detalle">
                         <input id="claim-ticket" 
                                 className="claim-form-text-input" 
                                 type="text" 
@@ -125,23 +128,24 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                                 onChange={(e) => handleChange("ticket", e.target.value)}
                         />
                         <p className={`${errors?.ticket ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
-                    </div>
-                    <div className="input-lugar-detalle">
-                        <input id="claim-location" 
-                                className="claim-form-text-input" 
-                                type="text" 
-                                placeholder="Lugar de la incidencia *" 
-                                name="lugar-reclamacion"
-                                value={formData.lugar}
-                                onChange={(e) => handleChange("lugar", e.target.value)}
-                        />
-                        <p className={`${errors?.lugar ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
+                        </div>
+                        <div className="input-lugar-detalle">
+                            <input id="claim-location" 
+                                    className="claim-form-text-input" 
+                                    type="text" 
+                                    placeholder="Lugar de la incidencia *" 
+                                    name="lugar-reclamacion"
+                                    value={formData.lugar}
+                                    onChange={(e) => handleChange("lugar", e.target.value)}
+                            />
+                            <p className={`${errors?.lugar ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
+                        </div>
                     </div>
                 </div>
                 <div className="parent-requerida-idioma">
                     <fieldset className="input-respuesta-requerida radio-input">
 
-                        <p className="input-text">¿Tu reclamación requiere respuesta? *</p>
+                        <p className="input-text"><strong>¿Tu reclamación requiere respuesta? *</strong></p>
 
                         <div className="radio-option">
                             <input type="radio" 
@@ -168,7 +172,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                     
                     <fieldset className="input-idioma-respuesta  radio-input">
 
-                        <p className="input-text">Idioma de la consulta *</p>
+                        <p className="input-text"><strong>Idioma de la consulta *</strong></p>
 
                         <div className="radio-option">
                             <input type="radio" 
@@ -206,7 +210,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                     </div>
                 </div>
                 <div className="parent-expongo-solicito">
-                    <p className="input-text">Máximo 4000 caracteres</p>
+                    <p className="input-text max-characters">Máximo 4000 caracteres</p>
                     <div className="input-textarea">
 
                         <textarea id="claimExpose"
@@ -219,7 +223,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                         />
                     </div>
                     <p className={`${errors?.expongo ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
-                    <p className="input-text">Máximo 4000 caracteres</p>
+                    <p className="input-text max-characters">Máximo 4000 caracteres</p>
                     <div className="input-textarea">
                         
                         <textarea id="claimRequest"

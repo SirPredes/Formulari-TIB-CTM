@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  padding: 0 15px;
+  padding: 15px;
   background-color: rgb(240, 238, 238);
 }
 .formulario-tib p{
@@ -82,7 +82,7 @@
   padding: 0;
 }
 .formulario-tib textarea{
-  width: 97%;
+  width: 96%;
   padding: 5px 10px;
   background: white;
   color: #002E6D;
@@ -103,23 +103,32 @@
 .formulario-tib input[type=radio]:focus{
   outline: none;
 }
-.formulario-tib .input-tipo,
-.formulario-tib .input-ambito,
 .formulario-tib .input-fecha-detalle,
 .formulario-tib .input-tarjeta-billete-lugar,
 .formulario-tib .input-respuesta-requerida,
 .formulario-tib .input-idioma-respuesta,
 .formulario-tib .input-archivo,
-.formulario-tib .input-textarea{
+.formulario-tib .input-textarea,
+.formulario-tib .input-tipo,
+.formulario-tib .input-ambito,
+.formulario-tib .input-respuesta-requerida,
+.formulario-tib .input-idioma-respuesta{
   background: white;
   border: none;
   border-radius: 3px;
 
+  width: 97.5%;
+
   margin: 10px 0;
   padding: 5px 10px;
 }
+
 .formulario-tib .input-textarea{
+  width: 97.5%;
   padding: 10px;
+}
+.formulario-tib .max-characters{
+  margin: 0 10px;
 }
 .formulario-tib .radio-option{
   display: flex;
@@ -140,10 +149,9 @@
   align-items: center;
 }
 .formulario-tib .radio-input{
-  padding: 0 15px;
+  padding: 3px 10px;
 
   display: flex;
-  align-items: center;
 }
 .formulario-tib button{
   width: 50%;
@@ -176,3 +184,61 @@
   display: none;
 }
 
+@media (min-width: 650px){
+  .formulario-tib .input-agrupa2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98.5%;
+    padding: 0;
+    margin: 0;
+  }
+  .formulario-tib .input-agrupa2 .input-fecha-detalle,
+  .formulario-tib .input-agrupa2 .input-linea-detalle,
+  .formulario-tib .input-agrupa2 .input-tarjeta-billete-detalle,
+  .formulario-tib .input-agrupa2 .input-lugar-detalle{
+    width: 48.5%;
+  }
+  .formulario-tib .input-agrupa2 .input-fecha-detalle{
+    width: 48%;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 10px;
+  }
+  .formulario-tib .radio-input{
+    align-items: center;
+  }
+}
+@media(max-width: 450px){
+  .formulario-tib input{
+    width: 95%;
+  }
+
+  .formulario-tib .input-fecha-detalle,
+  .formulario-tib .input-tarjeta-billete-lugar,
+  .formulario-tib .input-respuesta-requerida,
+  .formulario-tib .input-idioma-respuesta,
+  .formulario-tib .input-archivo,
+  .formulario-tib .input-textarea,
+  .formulario-tib .input-tipo,
+  .formulario-tib .input-ambito,
+  .formulario-tib .input-respuesta-requerida,
+  .formulario-tib .input-idioma-respuesta{
+    width: 95%;
+  }
+
+  .formulario-tib fieldset{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+  .formulario-tib .radio-input{
+    display: flex;
+    justify-content: start;
+
+    padding: 10px 10px;
+  }
+  .formulario-tib button{
+    width: 100%;
+  }
+}
