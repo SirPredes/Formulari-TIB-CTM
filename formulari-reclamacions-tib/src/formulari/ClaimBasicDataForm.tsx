@@ -20,7 +20,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                 <div className="input-basic-data-form">
                     <fieldset className="input-tipo radio-input">
 
-                        <p className="input-text"><strong>Tipo de consulta *</strong></p> {// Mirar com ho he de fer per a que no sigui sa lletra massa gruixada ni massa prima
+                        <p className="input-text">Tipo de consulta *</p> {// Mirar com ho he de fer per a que no sigui sa lletra massa gruixada ni massa prima
                         }
 
                         <div className="radio-option">
@@ -48,7 +48,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
 
                     <fieldset className="input-ambito  radio-input">
 
-                        <p className="input-text"><strong>Ámbito de reclamación *</strong></p>
+                        <p className="input-text">Ámbito de reclamación *</p>
                         
                         <div className="radio-option">
                             <input type="radio" 
@@ -97,7 +97,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                 <div className="input-fecha-linea-billete-lugar">
                     <div className="input-agrupa2">
                         <div className="input-fecha-detalle">
-                        <p className="input-text"><strong>Fecha incidencia: *</strong></p>
+                        <p className="input-text">Fecha incidencia: *</p>
                         <input id="claimDate" 
                                 type="datetime-local" 
                                 name="fecha-reclamacion"
@@ -145,7 +145,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                 <div className="parent-requerida-idioma">
                     <fieldset className="input-respuesta-requerida radio-input">
 
-                        <p className="input-text"><strong>¿Tu reclamación requiere respuesta? *</strong></p>
+                        <p className="input-text">¿Tu reclamación requiere respuesta? *</p>
 
                         <div className="radio-option">
                             <input type="radio" 
@@ -210,7 +210,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                     </div>
                 </div>
                 <div className="parent-expongo-solicito">
-                    <p className="input-text max-characters">Máximo 4000 caracteres</p>
+                    <p className="input-text-textarea max-characters">Máximo 4000 caracteres</p>
                     <div className="input-textarea">
 
                         <textarea id="claimExpose"
@@ -223,7 +223,7 @@ export function ClaimBasicDataForm({formData, setFormData, errors}: ClaimBasicDa
                         />
                     </div>
                     <p className={`${errors?.expongo ? "input-error" : "input-no-error"}`}>Este campo es obligatorio</p>
-                    <p className="input-text max-characters">Máximo 4000 caracteres</p>
+                    <p className="input-text-textarea max-characters">Máximo 4000 caracteres</p>
                     <div className="input-textarea">
                         
                         <textarea id="claimRequest"

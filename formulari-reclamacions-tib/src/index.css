@@ -3,11 +3,11 @@
   flex-direction: column;
   max-width: 800px;
   padding: 15px;
-  background-color: rgb(240, 238, 238);
+  background-color: #f2f2f2;
   font-size: 16px;
 }
 .formulario-tib p{
-  font-family: Roboto,sans-serif;
+  font-family: TIB,Roboto,sans-serif;
   color: #666;
   line-height: 28px;
   margin: 0px;
@@ -23,7 +23,7 @@
 }
 .formulario-tib .input-text{
   color: #454749;
-  font-weight: 500;
+  font-weight: 600;
 }
 .formulario-tib .aviso-legal-formulario p strong{
   font-weight: 800;
@@ -65,7 +65,7 @@
   border: none;
   border-radius: 3px;
 
-  font-weight: 600;
+  font-weight: 500;
 }
 .formulario-tib input[type=radio]{
   cursor: pointer;
@@ -92,9 +92,10 @@
   border: none;
   border-radius: 3px;
 
-  font-family: Roboto,sans-serif !important;
+  font-family: TIB,Roboto,sans-serif;
   color: #666;
   font-size: 16px;
+  font-weight: 500;
 }
 .formulario-tib input:focus,
 .formulario-tib textarea:focus{
@@ -123,6 +124,10 @@
   padding: 5px 10px;
 }
 
+.formulario-tib .input-text-textarea{
+  color: #454749;
+  font-weight: 500;
+}
 .formulario-tib .input-textarea{
   width: 97.5%;
   padding: 10px;
@@ -139,6 +144,7 @@
   align-self: center;
 
   margin-left: 5px;
+  margin-top: 5px;
 
   font-family: TIB,Roboto,sans-serif;
   font-size: 16px;
@@ -155,8 +161,8 @@
 
   display: flex;
 }
-.formulario-tib button{
-  width: 50%;
+.formulario-tib button.button-formulario{
+  width: 50% !important;
   background-color: #dc042b;
   padding: 10px;
   border-radius: 10px;
@@ -166,10 +172,10 @@
   color: white;
   cursor: pointer;
 
-  font-family: Roboto,sans-serif;
+  font-family: TIB,Roboto,sans-serif;
   font-size: 16px;
 }
-.formulario-tib button:hover{
+.formulario-tib button.button-formulario:hover{
   background: white;
   border: 1px solid #dc042b;
   color: #dc042b;
@@ -186,7 +192,7 @@
   display: none;
 }
 
-@media (min-width: 650px){
+@media (min-width: 451px){
   .formulario-tib .input-agrupa2{
     display: flex;
     align-items: center;
@@ -240,8 +246,8 @@
 
     padding: 10px 10px;
   }
-  .formulario-tib button{
-    width: 100%;
+  .formulario-tib button.button-formulario{
+    width: 100% !important;
   }
   .formulario-tib textarea{
     width: 94.5%;
